@@ -42,10 +42,10 @@
             <label for="no">Nombre:</label>
             <input type="text" name="no">
             <br>
-            <label for="no">Color:</label>
+            <label for="co">Color:</label>
             <input type="text" name="co">
             <br>
-            <label for="no">Fecha:</label>
+            <label for="fe">Fecha:</label>
             <input type="date" name="fe">
             <br>
             <input type="submit" value="Enviar" name="enviar">
