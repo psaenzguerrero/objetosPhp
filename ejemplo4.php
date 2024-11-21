@@ -24,7 +24,7 @@ class imagen{
     }
 }
 if (isset($_POST["enviar"])) {
-    $imagex = new imagen($_POST["archivo"],"./img",$_POST["borde"]); 
+    $imagex = new imagen($_POST["archivo"],$_POST["carpe"],$_POST["borde"]); 
     $imagex;
     echo $imagex;
 }else{
@@ -35,6 +35,7 @@ if (isset($_POST["enviar"])) {
             $archivos = scandir($_POST["carpe"]); 
             echo '
             <form action="" method="post" enctype="multipart/form-data">
+                <input type="text" name="carpe" value="'.$_POST["carpe"].'" hidden>
                 <select name="archivo" id="">';
 
                     foreach ($archivos as $archivo) {
