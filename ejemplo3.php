@@ -1,57 +1,60 @@
 <?php
-    class vehiculo{
-        private $nombre;
-        private $tipo;
-        private $peso;
+    // class vehiculo{
+    //     private $nombre;
+    //     private $tipo;
+    //     private $peso;
 
-        public function __construct($n="", $t="",$p=""){
-            $this->nombre = $n;
-            $this ->tipo = $t;
-            $this->peso = $p;
-        }
-        public function set_nom($n){
-            $this->nombre =$n;
-        }
-        public function set_tip($t){
-            $this->tipo =$t;
-        }
-        public function set_pes($p){
-            $this->peso =$p;
-        }
+    //     public function __construct($n="", $t="",$p=""){
+    //         $this->nombre = $n;
+    //         $this ->tipo = $t;
+    //         $this->peso = $p;
+    //     }
+    //     public function set_nom($n){
+    //         $this->nombre =$n;
+    //     }
+    //     public function set_tip($t){
+    //         $this->tipo =$t;
+    //     }
+    //     public function set_pes($p){
+    //         $this->peso =$p;
+    //     }
 
-        public function __getT($t){
-            return $this->$t;
-        }
-        public function __getP($p){
-            return $this->$p;
-        }
+    //     public function __getT($t){
+    //         return $this->$t;
+    //     }
+    //     public function __getP($p){
+    //         return $this->$p;
+    //     }
 
-        public function elegir(){
-            $texto = $this->tipo;
-            $tipo="";
-            if ($texto == "C") {
-                $tipo = "camión";
-                return $tipo;
-            }
-            if ($texto == "M") {
-                $tipo = "moto";
-                return $tipo;
-            }
-            if ($texto == "T") {
-                $tipo = "turismo";
-                return $tipo;
-            }
-        }
-        public function pesor(){
-            $cantidad = ($this->peso)/1000;
-            return $cantidad;
-        }
-        public function __toString(){
-            $str = "Se llama ".$this->nombre." es un ".$this->elegir()." y pesa unas ".$this->pesor()." toneladas";
-            return $str;
-        }
+    //     public function elegir(){
+    //         $texto = $this->tipo;
+    //         $tipo="";
+    //         if ($texto == "C") {
+    //             $tipo = "camión";
+    //             return $tipo;
+    //         }
+    //         if ($texto == "M") {
+    //             $tipo = "moto";
+    //             return $tipo;
+    //         }
+    //         if ($texto == "T") {
+    //             $tipo = "turismo";
+    //             return $tipo;
+    //         }
+    //     }
+    //     public function pesor(){
+    //         $cantidad = ($this->peso)/1000;
+    //         return $cantidad;
+    //     }
+    //     public function __toString(){
+    //         $str = "Se llama ".$this->nombre." es un ".$this->elegir()." y pesa unas ".$this->pesor()." toneladas";
+    //         return $str;
+    //     }
 
-    }
+    // }
+
+    require_once './fichero.php';
+
     if (isset($_POST["enviar"])) {
         $vehiculo = new vehiculo($_POST["no"],$_POST["ra"],$_POST["pe"]);
         

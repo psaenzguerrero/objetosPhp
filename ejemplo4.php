@@ -1,28 +1,31 @@
 <?php
 
-class imagen{
-    private $src;
-    private $border;
-    private $ruta_images;
+// class imagen{
+//     private $src;
+//     private $border;
+//     private $ruta_images;
 
-    public function __construct($sr,$ru,$bo=0){
-        if (!file_exists($ru)) {
-            mkdir($ru);
-        }
-        $this->src=$ru."/".$sr;
-        $this->border=$bo;
-        $this->ruta_images=$ru;
-    }
-    public function comprobar_ruta(){
-        if (!file_exists($this->ruta_images)) {
-            mkdir($this->ruta_images);
-        }
-    }
-    public function __toString(){
-        $str = "<img src=".$this->src." border=\"".$this->border."px\" />";
-        return $str;
-    }
-}
+//     public function __construct($sr,$ru,$bo=0){
+//         if (!file_exists($ru)) {
+//             mkdir($ru);
+//         }
+//         $this->src=$ru."/".$sr;
+//         $this->border=$bo;
+//         $this->ruta_images=$ru;
+//     }
+//     public function comprobar_ruta(){
+//         if (!file_exists($this->ruta_images)) {
+//             mkdir($this->ruta_images);
+//         }
+//     }
+//     public function __toString(){
+//         $str = "<img src=".$this->src." border=\"".$this->border."px\" />";
+//         return $str;
+//     }
+// }
+
+require_once './fichero.php';
+
 if (isset($_POST["enviar"])) {
     $imagex = new imagen($_POST["archivo"],$_POST["carpe"],$_POST["borde"]); 
     $imagex;
