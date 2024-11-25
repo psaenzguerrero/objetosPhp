@@ -1,5 +1,5 @@
 <?php
-require_once './fichero.php';
+require_once './fichero-ejemplo1.php';
 if (isset($_POST["enviar"])) {
     $perro = new perro($_POST["no"],$_POST["co"],$_POST["fe"],$_POST["ra"],$_POST["se"],$_POST["qe"]);
     if ($_POST["qe"] == "ladrar") {
